@@ -1,8 +1,6 @@
 package com.jonaslopez.itrsa.lisviewapielements.service;
 
-import java.util.List;
-
 public interface IServiceCallback {
-    void onSuccess(List<Object> object);
+    void onSuccess(String response);
     void onFailure(Exception e);
 }

@@ -38,8 +38,8 @@ public abstract class VolleyImp {
                     public void onResponse(String data) {
                         try {
                             String formatData = formatDataToJson(data);
-                            mResponseEvent.onSuccess(  parseJsonToObject( formatData ) );
-
+                          //  mResponseEvent.onSuccess(  parseJsonToObject( formatData ) );
+                            mResponseEvent.onSuccess( formatData );
                         } catch (Exception e) {
                             mResponseEvent.onFailure(e);
                         }
@@ -71,6 +71,4 @@ public abstract class VolleyImp {
     protected abstract int getMethod();
 
     protected abstract List parseJsonToObject(String jsonString);
-
-
 }
